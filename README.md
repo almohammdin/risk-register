@@ -7,3 +7,7 @@
 الرابط: https://almohammdin.github.io/risk-register/
 
 إعداد نايف المحمدي — مستشار الحوكمة وتطوير الأعمال.
+
+## المصادر المفتوحة
+
+طُوّر عرض التقرير في الإصدار 1.2.0 بالاستفادة من نمط الملخص الرقمي، وتوزيع مستويات المخاطر، وحالات المتابعة في مشروع [AI Governance Register](https://github.com/noamrazbuilds/ai-governance-register) المنشور بترخيص MIT. تفاصيل النسبة والترخيص في [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).

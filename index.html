@@ -7,19 +7,19 @@
   <meta name="description" content="أداة عربية تفاعلية لتحديد المخاطر المؤسسية وتقييمها ومعالجتها ومتابعتها وإعداد تقرير مخاطر مهني.">
   <meta name="theme-color" content="#0b1a2b">
   <link rel="canonical" href="https://almohammdin.github.io/risk-register/">
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=1">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=2">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ar_SA">
   <meta property="og:title" content="مرصد المخاطر المؤسسية">
   <meta property="og:description" content="من تسجيل الخطر حتى تقرير المخاطر.">
   <meta property="og:url" content="https://almohammdin.github.io/risk-register/">
-  <meta property="og:image" content="https://almohammdin.github.io/risk-register/og-image.png?v=2">
+  <meta property="og:image" content="https://almohammdin.github.io/risk-register/og-image.png?v=3">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="مرصد المخاطر المؤسسية">
   <meta name="twitter:description" content="تحديد المخاطر وتقييمها ومعالجتها ومتابعتها.">
-  <meta name="twitter:image" content="https://almohammdin.github.io/risk-register/og-image.png?v=2">
+  <meta name="twitter:image" content="https://almohammdin.github.io/risk-register/og-image.png?v=3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,8 +32,8 @@
       --shadow:0 14px 38px rgba(11,26,43,.09);--radius:18px;--font:'IBM Plex Sans Arabic','Tahoma','Arial',sans-serif;
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:#eef1f3;color:var(--ink);font-family:var(--font);line-height:1.7}
+    html{scroll-behavior:smooth;overscroll-behavior-y:none}
+    body{margin:0;background:#eef1f3;color:var(--ink);font-family:var(--font);line-height:1.7;overflow-x:hidden;overscroll-behavior-y:none}
     button,input,select,textarea{font:inherit}
     button{cursor:pointer}
     a{color:inherit}
@@ -151,15 +151,15 @@
     .report-page{width:min(100%,920px);margin:auto;background:#fff;border:1px solid var(--line);box-shadow:0 10px 28px rgba(11,26,43,.09);padding:38px 42px;position:relative;min-height:1080px;display:flex;flex-direction:column}
     .report-page:before{content:"";position:absolute;top:0;right:0;left:0;height:7px;background:linear-gradient(90deg,var(--navy) 0 72%,var(--gold) 72%)}
     .report-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding-bottom:15px}
-    .report-entity{display:flex;align-items:center;gap:12px;min-width:0}.report-entity-logo{width:86px;height:52px;border:1px solid var(--line);border-radius:8px;padding:5px;object-fit:contain;background:#fff}.report-entity-placeholder{width:52px;height:52px;border-radius:9px;background:#eef1f3;color:#76818e;display:grid;place-items:center;font-size:9px;text-align:center}
-    .report-tool-logo{width:138px;height:auto;object-fit:contain}.report-org{text-align:right;min-width:0}
+    .report-head.no-entity{justify-content:center}.report-entity{display:flex;align-items:center;gap:12px;min-width:0}.report-entity-logo{width:86px;height:52px;border:1px solid var(--line);border-radius:8px;padding:5px;object-fit:contain;background:#fff}
+    .report-tool-logo{width:156px;height:auto;object-fit:contain}.report-org{text-align:right;min-width:0}
     .report-org strong{display:block;color:var(--navy);font-size:15px}.report-org span{display:block;color:var(--muted);font-size:10px;margin-top:3px}
     .report-title{text-align:center;margin:24px 0 18px}.report-title small{color:#977529;font-weight:800}.report-title h2{margin:3px 0;color:var(--navy);font-size:24px}.report-title p{margin:0;color:var(--muted);font-size:11px}
-    .report-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}.report-stat{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}.report-stat span{display:block;color:var(--muted);font-size:9px}.report-stat strong{font-family:Arial,sans-serif;font-size:21px;color:var(--navy)}
+    .report-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}.report-stat{--report-accent:var(--navy);--report-tint:#f3f6f8;position:relative;overflow:hidden;border:1px solid color-mix(in srgb,var(--report-accent) 22%,#fff);border-radius:10px;padding:11px 10px 9px;text-align:center;background:linear-gradient(180deg,var(--report-tint),#fff)}.report-stat:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--report-accent)}.report-stat.total{--report-accent:#173a56;--report-tint:#edf3f7}.report-stat.high{--report-accent:#a83d3d;--report-tint:#fff1f0}.report-stat.outside{--report-accent:#b45d2f;--report-tint:#fff5ec}.report-stat.overdue-stat{--report-accent:#9a6d1f;--report-tint:#fff9e9}.report-stat span{display:block;color:var(--muted);font-size:9px}.report-stat strong{font-family:Arial,sans-serif;font-size:21px;color:var(--report-accent)}
     .executive-summary{background:linear-gradient(135deg,#f5f7f8,#fff);border:1px solid var(--line);border-right:4px solid var(--gold);border-radius:10px;padding:12px 14px;color:#3f4d5b;font-size:11px;line-height:1.9}
     .report-section{margin-top:21px}.report-section h3{font-size:15px;color:var(--navy);border-right:4px solid var(--gold);padding-right:9px;margin:0 0 10px}.report-note{background:#f8f6ef;border:1px solid #e8dfc5;border-radius:10px;padding:11px 13px;color:#5f5a4c;font-size:10px;line-height:1.8}.report-note.alert{background:#fff8e8;border-color:#ead49c;color:#6d551a}
     .report-document table{min-width:0}.report-document th,.report-document td{font-size:9px;padding:7px}
-    .report-profile{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:18px;align-items:center}.report-heatmap{max-width:570px;margin:auto}.report-levels{display:grid;gap:8px}.report-level{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--line);border-radius:9px;padding:8px 9px;font-size:9px;color:var(--muted)}.report-level strong{font-family:Arial,sans-serif;font-size:15px;color:var(--navy)}
+    .report-profile{display:grid;grid-template-columns:minmax(0,1fr) 205px;gap:18px;align-items:center}.report-heatmap{max-width:570px;margin:auto}.report-distribution{border:1px solid var(--line);border-radius:13px;padding:11px;background:#fbfcfc}.report-distribution h4{margin:0 0 8px;color:var(--navy);font-size:10px;text-align:center}.report-donut{width:126px;height:126px;border-radius:50%;margin:0 auto 10px;background:var(--risk-gradient);position:relative;display:grid;place-items:center}.report-donut:before{content:"";position:absolute;width:76px;height:76px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px rgba(11,26,43,.05)}.report-donut-center{position:relative;z-index:1;text-align:center}.report-donut-center strong{display:block;font-family:Arial,sans-serif;font-size:22px;color:var(--navy);line-height:1}.report-donut-center span{display:block;color:var(--muted);font-size:8px;margin-top:4px}.report-levels{display:grid;gap:6px}.report-level{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 8px;align-items:center;font-size:8px;color:var(--muted)}.report-level-label{display:flex;align-items:center;gap:5px}.report-level strong{font-family:Arial,sans-serif;font-size:11px;color:var(--navy)}.report-level-track{grid-column:1/-1;height:4px;border-radius:99px;background:#edf0f2;overflow:hidden}.report-level-fill{display:block;height:100%;border-radius:inherit}.report-status-summary{border:1px solid var(--line);border-radius:11px;padding:10px 12px;background:#fbfcfc}.report-status-track{height:9px;border-radius:99px;background:#edf0f2;display:flex;overflow:hidden;direction:rtl}.report-status-segment{height:100%}.report-status-legend{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:8px}.report-status-item{display:flex;align-items:center;justify-content:space-between;gap:5px;color:var(--muted);font-size:8px}.report-status-item span{display:flex;align-items:center;gap:4px}.report-status-item i{width:7px;height:7px;border-radius:2px}.report-status-item strong{font-family:Arial,sans-serif;color:var(--navy);font-size:10px}.report-risk-row td:first-child{border-right:3px solid transparent}.report-risk-row.low td:first-child{border-right-color:#35785b}.report-risk-row.medium td:first-child{border-right-color:#c39a35}.report-risk-row.high td:first-child{border-right-color:#d07b42}.report-risk-row.critical td:first-child{border-right-color:#b64f3d}
     .report-footer{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--muted);font-size:9px}
     .report-brand{display:flex;align-items:center;gap:8px}.naif-report-logo{display:flex;align-items:center;justify-content:center;width:96px;height:38px;border-radius:7px;background:var(--navy);padding:5px 8px}.naif-report-logo img{display:block;width:78px;height:auto}.report-page-number{font-family:Arial,sans-serif;color:#8b949e}
     .settings-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:13px}
@@ -189,7 +189,7 @@
     .dialog-actions{display:flex;justify-content:flex-end;gap:8px;padding:13px 20px 17px;border-top:1px solid var(--line);background:#fbfcfc}
     .consultation{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:18px;padding:17px 18px;border-radius:15px;background:linear-gradient(135deg,#0b1a2b,#173b57);color:#fff}
     .consultation h3{margin:0 0 3px;font-size:16px}.consultation p{margin:0;color:rgba(255,255,255,.7);font-size:11px;max-width:650px}
-    .site-footer{max-width:1260px;margin:0 auto 28px;padding:0 18px;text-align:center;color:#718090}
+    .site-footer{max-width:1260px;margin:0 auto;padding:0 18px max(16px,env(safe-area-inset-bottom));text-align:center;color:#718090}
     .footer-line{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;font-size:10px}.footer-line strong{color:#4e5d6d}.version{font-family:Arial,sans-serif;font-size:9px;color:#9ba4ae}
     .privacy-note{font-size:9px;color:#9099a4;margin:5px 0 10px}
     .social-name{font-family:Arial,sans-serif;font-size:10px;font-weight:700;color:#536172;display:block;margin-bottom:7px}
@@ -197,7 +197,7 @@
     .toast{position:fixed;left:20px;bottom:20px;z-index:100;background:var(--navy);color:#fff;border-radius:11px;padding:10px 13px;font-size:11px;box-shadow:0 12px 30px rgba(0,0,0,.22);opacity:0;transform:translateY(12px);pointer-events:none;transition:.2s}
     .toast.show{opacity:1;transform:translateY(0)}
     @media(max-width:980px){.dashboard-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.field{grid-column:span 6}.report-profile{grid-template-columns:1fr}}
-    @media(max-width:650px){.hero{padding:17px 15px 44px}.identity{align-items:flex-start}.personal-brand img{width:112px}.personal-brand span{font-size:10px}.tool-identity{margin-top:18px}.tool-copy p{font-size:14px}.tool-logo-card{width:min(100%,340px);padding:11px 14px}.suite-badge-wrap{margin-top:-16px}.app-shell{padding:0 9px}.app-nav{padding:9px}.nav-button{padding:8px 10px}.nav-spacer{display:none}.app-nav .add-risk{margin-right:auto}.view{padding:16px 13px}.section-head{flex-direction:column}.stats-grid{grid-template-columns:1fr 1fr;gap:8px}.stat{padding:12px;min-height:91px}.stat-value{font-size:26px}.org-ribbon,.sample-banner,.guide-callout{align-items:flex-start;flex-direction:column}.dashboard-grid{gap:11px}.heatmap{grid-template-rows:repeat(5,50px)}.toolbar{align-items:stretch}.toolbar .search,.toolbar .control,.toolbar .btn{width:100%;min-width:0}.field,.field.w6,.field.w8{grid-column:1/-1}.score-preview-grid{grid-template-columns:1fr}.score-arrow{transform:rotate(90deg);text-align:center}.report-document{padding:8px}.report-page{padding:29px 17px;min-height:0}.report-head{flex-direction:column}.report-tool-logo{width:120px}.report-stats{grid-template-columns:1fr 1fr}.consultation{align-items:flex-start;flex-direction:column}.consultation .btn{width:100%}.dialog-body{padding:12px}.form-section{padding:12px}.dialog-actions{padding:10px 12px}.dialog-actions .btn{flex:1}.logo-upload-box{align-items:flex-start;flex-direction:column}.entity-logo-preview{width:100%;height:94px;flex-basis:auto}.guide-steps,.guide-scale{grid-template-columns:1fr}}
+    @media(max-width:650px){.hero{padding:17px 15px 44px}.identity{align-items:flex-start}.personal-brand img{width:112px}.personal-brand span{font-size:10px}.tool-identity{margin-top:18px}.tool-copy p{font-size:14px}.tool-logo-card{width:min(100%,340px);padding:11px 14px}.suite-badge-wrap{margin-top:-16px}.app-shell{padding:0 9px}.app-nav{padding:9px}.nav-button{padding:8px 10px}.nav-spacer{display:none}.app-nav .add-risk{margin-right:auto}.view{padding:16px 13px}.section-head{flex-direction:column}.stats-grid{grid-template-columns:1fr 1fr;gap:8px}.stat{padding:12px;min-height:91px}.stat-value{font-size:26px}.org-ribbon,.sample-banner,.guide-callout{align-items:flex-start;flex-direction:column}.dashboard-grid{gap:11px}.heatmap{grid-template-rows:repeat(5,50px)}.toolbar{align-items:stretch}.toolbar .search,.toolbar .control,.toolbar .btn{width:100%;min-width:0}.field,.field.w6,.field.w8{grid-column:1/-1}.score-preview-grid{grid-template-columns:1fr}.score-arrow{transform:rotate(90deg);text-align:center}.report-document{padding:8px}.report-page{padding:29px 17px;min-height:0}.report-head{flex-direction:column;align-items:center}.report-head:not(.no-entity) .report-entity{width:100%}.report-tool-logo{width:150px}.report-stats{grid-template-columns:1fr 1fr}.report-status-legend{grid-template-columns:1fr 1fr}.consultation{align-items:flex-start;flex-direction:column}.consultation .btn{width:100%}.dialog-body{padding:12px}.form-section{padding:12px}.dialog-actions{padding:10px 12px}.dialog-actions .btn{flex:1}.logo-upload-box{align-items:flex-start;flex-direction:column}.entity-logo-preview{width:100%;height:94px;flex-basis:auto}.guide-steps,.guide-scale{grid-template-columns:1fr}}
     @media print{
       @page{size:A4;margin:12mm}
       body{background:#fff}
@@ -224,7 +224,7 @@
         </a>
       </div>
       <div class="tool-identity">
-        <div class="tool-logo-card"><img src="./risk-register-logo.svg?v=2" alt="مرصد المخاطر المؤسسية"></div>
+        <div class="tool-logo-card"><img src="./risk-register-logo.svg?v=3" alt="مرصد المخاطر المؤسسية"></div>
         <div class="tool-copy">
           <h1 class="sr-only">مرصد المخاطر المؤسسية</h1>
           <p>سجل المخاطر، قيّم احتمالها وأثرها، وثق الضوابط، حدد المعالجة، وتابع الأولويات في تقرير مخاطر واضح.</p>
@@ -339,7 +339,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-line"><span>إعداد نايف المحمدي</span><strong>مستشار الحوكمة وتطوير الأعمال</strong><span>مرصد المخاطر المؤسسية</span><span class="version">v1.1.0</span></div>
+    <div class="footer-line"><span>إعداد نايف المحمدي</span><strong>مستشار الحوكمة وتطوير الأعمال</strong><span>مرصد المخاطر المؤسسية</span><span class="version">v1.2.0</span></div>
     <div class="privacy-note">تُحفظ البيانات على جهاز المستخدم فقط، دون تخزينها لدى الأداة.</div>
     <span class="social-name">almohammdin</span>
     <nav class="socials" aria-label="حسابات نايف المحمدي">
@@ -431,7 +431,7 @@
   <script>
   (()=>{
     'use strict';
-    const TOOL_VERSION='1.1.0';
+    const TOOL_VERSION='1.2.0';
     const TOOL_LINK='https://almohammdin.github.io/risk-register/';
     const STORAGE_KEY='naif-risk-register-v1';
     const categories=['استراتيجي','مالي','تشغيلي','امتثال ونظامي','تقني وأمن معلومات','سمعة','موارد بشرية','سلامة واستمرارية أعمال','أخرى'];
@@ -442,6 +442,12 @@
       critical:{label:'حرج',color:'#a83d3d',bg:'#d97768'}
     };
     const statusLabels={open:'مفتوح',treating:'قيد المعالجة',monitoring:'تحت المراقبة',closed:'مغلق'};
+    const statusMeta={
+      open:{label:'مفتوح',color:'#b64f3d'},
+      treating:{label:'قيد المعالجة',color:'#c9a84c'},
+      monitoring:{label:'تحت المراقبة',color:'#4f7e95'},
+      closed:{label:'مغلق',color:'#35785b'}
+    };
     const responseLabels={reduce:'تخفيض',avoid:'تجنب',transfer:'نقل أو مشاركة',accept:'قبول'};
     const effectivenessLabels={none:'غير مقيمة',weak:'ضعيفة',partial:'جزئية',effective:'فعالة',strong:'فعالة جدًا'};
     const $=id=>document.getElementById(id);
@@ -555,6 +561,7 @@
       if(!items.length){$('plansContent').innerHTML='<div class="empty"><strong>لا توجد خطط معالجة مسجلة</strong>أضف إجراء المعالجة والمسؤول والموعد داخل سجل الخطر.</div>';return}
       $('plansContent').innerHTML=`<div class="table-wrap"><table><thead><tr><th>الخطر</th><th>الاستجابة</th><th>إجراء المعالجة</th><th>مسؤول الإجراء</th><th>الموعد</th><th>الحالة</th><th>الخطر المتبقي</th><th></th></tr></thead><tbody>${items.map(r=>`<tr><td class="risk-title-cell"><strong>${esc(r.title)}</strong><span class="latin">${esc(r.code)}</span></td><td>${esc(responseLabels[r.response]||'تخفيض')}</td><td>${esc(r.treatmentAction||'—')}</td><td>${esc(r.treatmentOwner||'—')}</td><td class="latin ${isOverdue(r)?'overdue':''}">${formatDate(r.dueDate)}${isOverdue(r)?' · متأخر':''}</td><td>${statusChip(r.status)}</td><td>${levelChip(score(r.residualLikelihood,r.residualImpact))}</td><td><button class="icon-button" data-edit-risk="${esc(r.id)}" aria-label="تعديل">${icon('edit')}</button></td></tr>`).join('')}</tbody></table></div>`;
     }
+    // نمط الملخص وتوزيع المخاطر وحالات المتابعة مقتبس من مشروع MIT موثق في THIRD_PARTY_NOTICES.md.
     function renderReport(){
       const total=state.risks.length,appetite=Number(state.org.appetite||9);
       const high=state.risks.filter(r=>['high','critical'].includes(levelFor(score(r.residualLikelihood,r.residualImpact)))&&r.status!=='closed').length;
@@ -564,12 +571,23 @@
       const actions=[...state.risks].filter(r=>r.treatmentAction&&r.status!=='closed').sort((a,b)=>(isOverdue(b)-isOverdue(a))||String(a.dueDate||'9999').localeCompare(String(b.dueDate||'9999'))).slice(0,8);
       const priorityItems=top.filter(r=>score(r.residualLikelihood,r.residualImpact)>appetite).slice(0,4);
       const counts={low:0,medium:0,high:0,critical:0};state.risks.forEach(r=>counts[levelFor(score(r.residualLikelihood,r.residualImpact))]++);
+      const distributionOrder=['critical','high','medium','low'];
+      let distributionCursor=0;
+      const distributionSegments=distributionOrder.map(key=>{const start=distributionCursor;distributionCursor+=total?(counts[key]/total*100):0;return`${levelMeta[key].bg} ${start.toFixed(2)}% ${distributionCursor.toFixed(2)}%`});
+      const riskGradient=total?`conic-gradient(${distributionSegments.join(',')})`:'conic-gradient(#edf0f2 0 100%)';
+      const distributionMarkup=`<aside class="report-distribution"><h4>توزيع مستويات المخاطر</h4><div class="report-donut" style="--risk-gradient:${riskGradient}"><div class="report-donut-center"><strong>${total}</strong><span>إجمالي المخاطر</span></div></div><div class="report-levels">${distributionOrder.map(key=>{const meta=levelMeta[key],pct=total?Math.round(counts[key]/total*100):0;return`<div class="report-level"><span class="report-level-label"><i class="legend-dot" style="background:${meta.bg}"></i>${meta.label}</span><strong>${counts[key]} · ${pct}%</strong><span class="report-level-track"><i class="report-level-fill" style="width:${pct}%;background:${meta.bg}"></i></span></div>`}).join('')}</div></aside>`;
+      const statusCounts={open:0,treating:0,monitoring:0,closed:0};state.risks.forEach(r=>{statusCounts[r.status]=(statusCounts[r.status]||0)+1});
+      const statusOrder=['open','treating','monitoring','closed'];
+      const statusSummary=`<div class="report-status-summary"><div class="report-status-track">${total?statusOrder.map(key=>`<i class="report-status-segment" style="width:${(statusCounts[key]/total*100).toFixed(2)}%;background:${statusMeta[key].color}"></i>`).join(''):''}</div><div class="report-status-legend">${statusOrder.map(key=>`<div class="report-status-item"><span><i style="background:${statusMeta[key].color}"></i>${statusMeta[key].label}</span><strong>${statusCounts[key]}</strong></div>`).join('')}</div></div>`;
       const appetiteLabel={4:'متحفظ — حتى 4',9:'متوازن — حتى 9',15:'مرن — حتى 15'}[appetite]||`حتى ${appetite}`;
       const reportDate=new Date().toLocaleDateString('en-GB');
       const orgDetails=[state.org.type,state.org.sector].filter(Boolean).join(' · ');
-      const entityLogo=state.org.logo?`<img class="report-entity-logo" src="${esc(state.org.logo)}" alt="شعار ${esc(state.org.name||'الجهة')}">`:'<div class="report-entity-placeholder">شعار<br>الجهة</div>';
-      const reportHeader=()=>`<div class="report-head"><div class="report-entity">${entityLogo}<div class="report-org"><strong>${esc(state.org.name||'اسم الجهة')}</strong><span>${esc(orgDetails||'بيانات الجهة')}</span><span>${esc(state.org.period||'فترة التقرير غير محددة')}</span></div></div><img class="report-tool-logo" src="./risk-register-logo.svg?v=2" alt="مرصد المخاطر"></div>`;
-      const reportFooter=(page)=>`<div class="report-footer"><div><strong>إعداد:</strong> ${esc(state.org.preparedBy||'—')} · <strong>الاعتماد أو المراجعة:</strong> ${esc(state.org.approvedBy||'—')}</div><div class="report-brand"><span class="naif-report-logo"><img src="./naif-logo.svg?v=1" alt="نايف المحمدي"></span><span>${TOOL_LINK}<br>v${TOOL_VERSION}</span><span class="report-page-number">${page}/2</span></div></div>`;
+      const entityLogo=state.org.logo?`<img class="report-entity-logo" src="${esc(state.org.logo)}" alt="${state.org.name?`شعار ${esc(state.org.name)}`:'شعار الجهة'}">`:'';
+      const entityText=[state.org.name?`<strong>${esc(state.org.name)}</strong>`:'',orgDetails?`<span>${esc(orgDetails)}</span>`:'',state.org.period?`<span>${esc(state.org.period)}</span>`:''].filter(Boolean).join('');
+      const entityBlock=(state.org.logo||state.org.name)?`<div class="report-entity">${entityLogo}${entityText?`<div class="report-org">${entityText}</div>`:''}</div>`:'';
+      const reportHeader=()=>`<div class="report-head${entityBlock?'':' no-entity'}">${entityBlock}<img class="report-tool-logo" src="./risk-register-logo.svg?v=3" alt="مرصد المخاطر"></div>`;
+      const footerMeta=[state.org.preparedBy?`<strong>إعداد:</strong> ${esc(state.org.preparedBy)}`:'',state.org.approvedBy?`<strong>الاعتماد أو المراجعة:</strong> ${esc(state.org.approvedBy)}`:''].filter(Boolean).join(' · ');
+      const reportFooter=(page)=>`<div class="report-footer">${footerMeta?`<div>${footerMeta}</div>`:''}<div class="report-brand"><span class="naif-report-logo"><img src="./naif-logo.svg?v=1" alt="نايف المحمدي"></span><span>${TOOL_LINK}<br>v${TOOL_VERSION}</span><span class="report-page-number">${page}/2</span></div></div>`;
       const sampleNote=state.risks.some(r=>r.isSample)?'<div class="report-note alert">يتضمن التقرير مثالين توضيحيين. عدّلهما أو احذفهما قبل اعتماد التقرير النهائي.</div>':'';
       const executive=total?`بلغ إجمالي المخاطر المسجلة <strong class="latin">${total}</strong>، منها <strong class="latin">${high}</strong> بمستوى عال أو حرج، بينما تجاوزت <strong class="latin">${outside}</strong> منها حد القبول المعتمد. ${overdue?`كما تجاوزت <strong class="latin">${overdue}</strong> إجراءات موعدها وتحتاج متابعة.`:'لا توجد إجراءات معالجة متأخرة وفق المواعيد المسجلة.'} ${top[0]?`أعلى تعرض متبقٍ حاليًا هو «${esc(top[0].title)}» بدرجة <strong class="latin">${score(top[0].residualLikelihood,top[0].residualImpact)}</strong>.`:''}`:'لم تسجل مخاطر بعد. أضف المخاطر وقيّمها ليظهر الملخص التنفيذي.';
       $('reportDocument').innerHTML=`
@@ -578,15 +596,16 @@
           <div class="report-title"><small>مرصد المخاطر المؤسسية</small><h2>تقرير المخاطر</h2><p>تاريخ الإعداد: ${reportDate} · حد القبول: ${appetiteLabel}</p></div>
           ${sampleNote}
           <section class="report-section"><h3>الملخص التنفيذي</h3><div class="executive-summary">${executive}</div></section>
-          <div class="report-stats"><div class="report-stat"><span>إجمالي المخاطر</span><strong>${total}</strong></div><div class="report-stat"><span>حرجة وعالية</span><strong>${high}</strong></div><div class="report-stat"><span>خارج حدود القبول</span><strong>${outside}</strong></div><div class="report-stat"><span>إجراءات متأخرة</span><strong>${overdue}</strong></div></div>
-          <section class="report-section"><h3>الخريطة الحرارية للمخاطر المتبقية</h3><div class="report-profile"><div><div class="report-heatmap">${heatmapMarkup(false)}</div><div class="heat-legend">${legendMarkup()}</div></div><div class="report-levels">${Object.entries(levelMeta).map(([key,meta])=>`<div class="report-level"><span><i class="legend-dot" style="display:inline-block;background:${meta.bg};vertical-align:middle;margin-left:5px"></i>${meta.label}</span><strong>${counts[key]}</strong></div>`).join('')}</div></div></section>
+          <div class="report-stats"><div class="report-stat total"><span>إجمالي المخاطر</span><strong>${total}</strong></div><div class="report-stat high"><span>حرجة وعالية</span><strong>${high}</strong></div><div class="report-stat outside"><span>خارج حدود القبول</span><strong>${outside}</strong></div><div class="report-stat overdue-stat"><span>إجراءات متأخرة</span><strong>${overdue}</strong></div></div>
+          <section class="report-section"><h3>الخريطة الحرارية للمخاطر المتبقية</h3><div class="report-profile"><div><div class="report-heatmap">${heatmapMarkup(false)}</div><div class="heat-legend">${legendMarkup()}</div></div>${distributionMarkup}</div></section>
           ${reportFooter(1)}
         </section>
         <section class="report-page">
           ${reportHeader()}
           <div class="report-title"><small>تفاصيل المتابعة</small><h2>الأولويات وخطط المعالجة</h2><p>${esc(state.org.period||`أُعد في ${reportDate}`)}</p></div>
-          <section class="report-section"><h3>المخاطر الأعلى أولوية</h3>${top.length?`<table><thead><tr><th>الرمز</th><th>الخطر</th><th>المالك</th><th>المستوى المتبقي</th><th>الاستجابة</th><th>الحالة</th></tr></thead><tbody>${top.map(r=>`<tr><td class="latin">${esc(r.code)}</td><td>${esc(r.title)} ${sampleBadge(r)}</td><td>${esc(r.owner||'—')}</td><td>${levelChip(score(r.residualLikelihood,r.residualImpact))}</td><td>${esc(responseLabels[r.response]||'تخفيض')}</td><td>${esc(statusLabels[r.status]||'مفتوح')}</td></tr>`).join('')}</tbody></table>`:'<div class="report-note">يُستكمل هذا القسم بعد تسجيل المخاطر.</div>'}</section>
-          <section class="report-section"><h3>المعالجات والمتابعة</h3>${actions.length?`<table><thead><tr><th>الخطر</th><th>إجراء المعالجة</th><th>مسؤول الإجراء</th><th>الموعد</th><th>الحالة</th></tr></thead><tbody>${actions.map(r=>`<tr><td>${esc(r.title)}</td><td>${esc(r.treatmentAction)}</td><td>${esc(r.treatmentOwner||'—')}</td><td class="latin ${isOverdue(r)?'overdue':''}">${formatDate(r.dueDate)}${isOverdue(r)?' · متأخر':''}</td><td>${esc(statusLabels[r.status]||'مفتوح')}</td></tr>`).join('')}</tbody></table>`:'<div class="report-note">تظهر هنا إجراءات المعالجة بعد إضافتها إلى سجل المخاطر.</div>'}</section>
+          <section class="report-section"><h3>حالة سجل المخاطر</h3>${statusSummary}</section>
+          <section class="report-section"><h3>المخاطر الأعلى أولوية</h3>${top.length?`<table><thead><tr><th>الرمز</th><th>الخطر</th><th>المالك</th><th>المستوى المتبقي</th><th>الاستجابة</th><th>الحالة</th></tr></thead><tbody>${top.map(r=>{const level=levelFor(score(r.residualLikelihood,r.residualImpact));return`<tr class="report-risk-row ${level}"><td class="latin">${esc(r.code)}</td><td>${esc(r.title)} ${sampleBadge(r)}</td><td>${esc(r.owner||'—')}</td><td>${levelChip(score(r.residualLikelihood,r.residualImpact))}</td><td>${esc(responseLabels[r.response]||'تخفيض')}</td><td>${statusChip(r.status)}</td></tr>`}).join('')}</tbody></table>`:'<div class="report-note">يُستكمل هذا القسم بعد تسجيل المخاطر.</div>'}</section>
+          <section class="report-section"><h3>المعالجات والمتابعة</h3>${actions.length?`<table><thead><tr><th>الخطر</th><th>إجراء المعالجة</th><th>مسؤول الإجراء</th><th>الموعد</th><th>الحالة</th></tr></thead><tbody>${actions.map(r=>{const level=levelFor(score(r.residualLikelihood,r.residualImpact));return`<tr class="report-risk-row ${level}"><td>${esc(r.title)}</td><td>${esc(r.treatmentAction)}</td><td>${esc(r.treatmentOwner||'—')}</td><td class="latin ${isOverdue(r)?'overdue':''}">${formatDate(r.dueDate)}${isOverdue(r)?' · متأخر':''}</td><td>${statusChip(r.status)}</td></tr>`}).join('')}</tbody></table>`:'<div class="report-note">تظهر هنا إجراءات المعالجة بعد إضافتها إلى سجل المخاطر.</div>'}</section>
           <section class="report-section"><h3>أولويات القرار والمتابعة</h3><div class="report-note">${priorityItems.length?`تحتاج المخاطر التالية إلى قرار أو متابعة لأنها تتجاوز حد القبول: ${priorityItems.map(r=>`«${esc(r.title)}»`).join('، ')}.`:'لا توجد مخاطر مفتوحة تتجاوز حد القبول وفق البيانات الحالية.'}</div></section>
           <section class="report-section"><h3>ملاحظة الاستخدام</h3><div class="report-note">يعرض التقرير النتائج المبنية على البيانات المدخلة. تعتمد قرارات المعالجة وحدود القبول على سياق الجهة وسياساتها وصلاحياتها المعتمدة، مع مراجعة السجل دوريًا وعند حدوث تغير جوهري.</div></section>
           ${reportFooter(2)}
