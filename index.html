@@ -71,6 +71,7 @@
     .btn.soft:hover{background:var(--soft)}
     .btn.danger{background:#fff5f4;color:#9b3b36;border-color:#efcbc7}
     .btn.small{min-height:34px;padding:6px 10px;font-size:11px}
+    .btn[hidden]{display:none!important}
     .btn svg,.icon-button svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
     .view{display:none;padding:24px}
     .view.active{display:block}
@@ -570,7 +571,7 @@
       const reportHeader=()=>`<div class="report-head"><div class="report-entity">${entityLogo}<div class="report-org"><strong>${esc(state.org.name||'اسم الجهة')}</strong><span>${esc(orgDetails||'بيانات الجهة')}</span><span>${esc(state.org.period||'فترة التقرير غير محددة')}</span></div></div><img class="report-tool-logo" src="./risk-register-logo.svg?v=2" alt="مرصد المخاطر"></div>`;
       const reportFooter=(page)=>`<div class="report-footer"><div><strong>إعداد:</strong> ${esc(state.org.preparedBy||'—')} · <strong>الاعتماد أو المراجعة:</strong> ${esc(state.org.approvedBy||'—')}</div><div class="report-brand"><span class="naif-report-logo"><img src="./naif-logo.svg?v=1" alt="نايف المحمدي"></span><span>${TOOL_LINK}<br>v${TOOL_VERSION}</span><span class="report-page-number">${page}/2</span></div></div>`;
       const sampleNote=state.risks.some(r=>r.isSample)?'<div class="report-note alert">يتضمن التقرير مثالين توضيحيين. عدّلهما أو احذفهما قبل اعتماد التقرير النهائي.</div>':'';
-      const executive=total?`يتضمن سجل المخاطر <strong class="latin">${total}</strong> مخاطر، منها <strong class="latin">${high}</strong> بمستوى عال أو حرج، و<strong class="latin">${outside}</strong> تتجاوز حد القبول المعتمد. ${overdue?`كما توجد <strong class="latin">${overdue}</strong> إجراءات تجاوزت موعدها وتحتاج متابعة.`:'لا توجد إجراءات معالجة متأخرة وفق المواعيد المسجلة.'} ${top[0]?`أعلى تعرض متبقٍ حاليًا هو «${esc(top[0].title)}» بدرجة <strong class="latin">${score(top[0].residualLikelihood,top[0].residualImpact)}</strong>.`:''}`:'لم تسجل مخاطر بعد. أضف المخاطر وقيّمها ليظهر الملخص التنفيذي.';
+      const executive=total?`بلغ إجمالي المخاطر المسجلة <strong class="latin">${total}</strong>، منها <strong class="latin">${high}</strong> بمستوى عال أو حرج، بينما تجاوزت <strong class="latin">${outside}</strong> منها حد القبول المعتمد. ${overdue?`كما تجاوزت <strong class="latin">${overdue}</strong> إجراءات موعدها وتحتاج متابعة.`:'لا توجد إجراءات معالجة متأخرة وفق المواعيد المسجلة.'} ${top[0]?`أعلى تعرض متبقٍ حاليًا هو «${esc(top[0].title)}» بدرجة <strong class="latin">${score(top[0].residualLikelihood,top[0].residualImpact)}</strong>.`:''}`:'لم تسجل مخاطر بعد. أضف المخاطر وقيّمها ليظهر الملخص التنفيذي.';
       $('reportDocument').innerHTML=`
         <section class="report-page">
           ${reportHeader()}
