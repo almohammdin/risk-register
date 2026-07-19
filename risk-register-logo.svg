@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
+  <title id="title">مرصد المخاطر المؤسسية</title>
+  <desc id="desc">درع بداخله مؤشر رصد للمخاطر</desc>
+  <defs>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10283e"/>
+      <stop offset="1" stop-color="#071725"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9bb67"/>
+      <stop offset="1" stop-color="#b58b2f"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#071725" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <g transform="translate(465 25)" filter="url(#shadow)">
+    <path d="M105 8c35 22 69 29 98 31v78c0 62-38 106-98 132C45 223 7 179 7 117V39c29-2 63-9 98-31Z" fill="url(#shield)"/>
+    <path d="M105 25c29 17 56 24 81 27v65c0 51-29 87-81 111-52-24-81-60-81-111V52c25-3 52-10 81-27Z" fill="none" stroke="#d9bb67" stroke-width="3" opacity=".95"/>
+    <g transform="translate(105 119)" fill="none" stroke="url(#accent)" stroke-width="7" stroke-linecap="round">
+      <path d="M-55 0a55 55 0 0 1 110 0" opacity=".35"/>
+      <path d="M-38 0a38 38 0 0 1 76 0" opacity=".62"/>
+      <path d="M-21 0a21 21 0 0 1 42 0"/>
+    </g>
+    <path d="M105 119 151 78" fill="none" stroke="#d9bb67" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="105" cy="119" r="10" fill="#b64f3d" stroke="#fff7df" stroke-width="4"/>
+    <path d="M62 164h86" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
+    <g fill="#fff" opacity=".88">
+      <rect x="62" y="177" width="18" height="18" rx="4"/>
+      <rect x="86" y="177" width="18" height="18" rx="4"/>
+      <rect x="110" y="177" width="18" height="18" rx="4"/>
+      <rect x="134" y="177" width="18" height="18" rx="4"/>
+    </g>
+    <rect x="134" y="177" width="18" height="18" rx="4" fill="#b64f3d"/>
+  </g>
+  <g text-anchor="end" font-family="Tajawal, 'IBM Plex Sans Arabic', Arial, sans-serif">
+    <text x="425" y="126" font-size="59" font-weight="800" fill="#0b1a2b">مرصد المخاطر</text>
+    <text x="425" y="176" font-size="29" font-weight="600" fill="#9a772c">المخاطر المؤسسية</text>
+    <path d="M85 202h340" stroke="#d9bb67" stroke-width="3"/>
+    <text x="425" y="237" font-size="17" font-weight="500" fill="#536273">تحديد · تقييم · معالجة · متابعة</text>
+  </g>
+</svg>
