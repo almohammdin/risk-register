@@ -33,7 +33,7 @@
     </g>
     <rect x="134" y="177" width="18" height="18" rx="4" fill="#b64f3d"/>
   </g>
-  <g text-anchor="end" font-family="Tajawal, 'IBM Plex Sans Arabic', Arial, sans-serif">
+  <g text-anchor="end" font-family="'IBM Plex Sans Arabic', Tahoma, Arial, sans-serif">
     <text x="425" y="126" font-size="59" font-weight="800" fill="#0b1a2b">مرصد المخاطر</text>
     <text x="425" y="176" font-size="29" font-weight="600" fill="#9a772c">المخاطر المؤسسية</text>
     <path d="M85 202h340" stroke="#d9bb67" stroke-width="3"/>

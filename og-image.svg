@@ -23,11 +23,11 @@
       <rect width="28" height="28" rx="5" fill="#dce8df"/><rect x="36" width="28" height="28" rx="5" fill="#eadcae"/><rect x="72" width="28" height="28" rx="5" fill="#eac181"/><rect x="108" width="28" height="28" rx="5" fill="#df9563"/><rect x="144" width="28" height="28" rx="5" fill="#b64f3d"/>
     </g>
   </g>
-  <g text-anchor="end" font-family="Tajawal, 'IBM Plex Sans Arabic', Arial, sans-serif">
+  <g text-anchor="end" font-family="'IBM Plex Sans Arabic', Tahoma, Arial, sans-serif">
     <text x="675" y="226" font-size="76" font-weight="800" fill="#0b1a2b">مرصد المخاطر</text>
     <text x="675" y="301" font-size="42" font-weight="700" fill="#987329">المخاطر المؤسسية</text>
     <path d="M110 344h565" stroke="#d9bb67" stroke-width="4"/>
-    <text x="675" y="405" font-size="28" font-weight="500" fill="#536273">من تسجيل الخطر حتى تقرير مجلس الإدارة</text>
+    <text x="675" y="405" font-size="28" font-weight="500" fill="#536273">من تسجيل الخطر حتى تقرير المخاطر</text>
     <text x="675" y="458" font-size="21" font-weight="500" fill="#778392">تحديد · تقييم · معالجة · متابعة</text>
   </g>
   <text x="110" y="560" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#0b1a2b">almohammdin.github.io/risk-register</text>
