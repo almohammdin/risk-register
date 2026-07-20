@@ -161,7 +161,7 @@
     .report-document table{min-width:0}.report-document th,.report-document td{font-size:9px;padding:7px}
     .report-profile{display:grid;grid-template-columns:minmax(0,1fr) 205px;gap:18px;align-items:center}.report-heatmap{max-width:570px;margin:auto}.report-distribution{border:1px solid var(--line);border-radius:13px;padding:11px;background:#fbfcfc}.report-distribution h4{margin:0 0 8px;color:var(--navy);font-size:10px;text-align:center}.report-donut{width:126px;height:126px;border-radius:50%;margin:0 auto 10px;background:var(--risk-gradient);position:relative;display:grid;place-items:center}.report-donut:before{content:"";position:absolute;width:76px;height:76px;border-radius:50%;background:#fff;box-shadow:0 0 0 1px rgba(11,26,43,.05)}.report-donut-center{position:relative;z-index:1;text-align:center}.report-donut-center strong{display:block;font-family:Arial,sans-serif;font-size:22px;color:var(--navy);line-height:1}.report-donut-center span{display:block;color:var(--muted);font-size:8px;margin-top:4px}.report-levels{display:grid;gap:6px}.report-level{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 8px;align-items:center;font-size:8px;color:var(--muted)}.report-level-label{display:flex;align-items:center;gap:5px}.report-level strong{font-family:Arial,sans-serif;font-size:11px;color:var(--navy)}.report-level-track{grid-column:1/-1;height:4px;border-radius:99px;background:#edf0f2;overflow:hidden}.report-level-fill{display:block;height:100%;border-radius:inherit}.report-status-summary{border:1px solid var(--line);border-radius:11px;padding:10px 12px;background:#fbfcfc}.report-status-track{height:9px;border-radius:99px;background:#edf0f2;display:flex;overflow:hidden;direction:rtl}.report-status-segment{height:100%}.report-status-legend{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:8px}.report-status-item{display:flex;align-items:center;justify-content:space-between;gap:5px;color:var(--muted);font-size:8px}.report-status-item span{display:flex;align-items:center;gap:4px}.report-status-item i{width:7px;height:7px;border-radius:2px}.report-status-item strong{font-family:Arial,sans-serif;color:var(--navy);font-size:10px}.report-risk-row td:first-child{border-right:3px solid transparent}.report-risk-row.low td:first-child{border-right-color:#35785b}.report-risk-row.medium td:first-child{border-right-color:#c39a35}.report-risk-row.high td:first-child{border-right-color:#d07b42}.report-risk-row.critical td:first-child{border-right-color:#b64f3d}
     .report-footer{margin-top:auto;padding-top:13px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;color:var(--muted);font-size:8px;position:relative}
-    .report-footer-owner,.report-footer-link{display:flex;align-items:center;gap:9px;min-width:0}.naif-report-logo{display:block;flex:0 0 88px;width:88px;height:42px;background:var(--navy);-webkit-mask:url('./naif-logo.svg?v=1') center/contain no-repeat;mask:url('./naif-logo.svg?v=1') center/contain no-repeat}.report-footer-tool-name{display:grid;gap:2px}.report-footer-tool-name strong{color:var(--navy);font-size:10px;white-space:nowrap}.report-footer-tool-name span{color:var(--muted);font-size:7.5px}.report-footer-link{direction:ltr;text-align:left}.report-footer-link img{display:block;width:54px;height:28px;object-fit:contain}.report-footer-url{display:grid;gap:2px;direction:ltr}.report-footer-url a{color:#536172;text-decoration:none;font-family:Arial,sans-serif;font-size:7.5px;white-space:nowrap}.report-footer-url small{font-family:Arial,sans-serif;font-size:7px;color:#929ba5}.report-page-number{position:absolute;left:50%;transform:translateX(-50%);font-family:Arial,sans-serif;color:#8b949e}
+    .report-footer-owner,.report-footer-link{display:flex;align-items:center;gap:9px;min-width:0}.naif-report-logo{display:block;flex:0 0 88px;width:88px;height:42px;object-fit:contain}.report-footer-tool-name{display:grid;gap:2px}.report-footer-tool-name strong{color:var(--navy);font-size:10px;white-space:nowrap}.report-footer-tool-name span{color:var(--muted);font-size:7.5px}.report-footer-link{direction:ltr;text-align:left}.report-footer-link img{display:block;width:54px;height:28px;object-fit:contain}.report-footer-url{display:grid;gap:2px;direction:ltr}.report-footer-url a{color:#536172;text-decoration:none;font-family:Arial,sans-serif;font-size:7.5px;white-space:nowrap}.report-footer-url small{font-family:Arial,sans-serif;font-size:7px;color:#929ba5}.report-page-number{position:absolute;left:50%;transform:translateX(-50%);font-family:Arial,sans-serif;color:#8b949e}
     .settings-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:13px}
     .field{grid-column:span 4}.field.w6{grid-column:span 6}.field.w8{grid-column:span 8}.field.w12{grid-column:1/-1}
     .field label{display:block;color:#465363;font-size:11px;font-weight:700;margin:0 2px 6px}
@@ -195,6 +195,13 @@
     .socials{display:flex;align-items:center;justify-content:center;gap:8px}.social-link{width:32px;height:32px;border:1px solid #d9dfe5;border-radius:9px;background:#fff;display:grid;place-items:center}.social-link img,.social-link svg{width:16px;height:16px}.social-link svg{fill:#0b1a2b}
     .toast{position:fixed;left:20px;bottom:20px;z-index:100;background:var(--navy);color:#fff;border-radius:11px;padding:10px 13px;font-size:11px;box-shadow:0 12px 30px rgba(0,0,0,.22);opacity:0;transform:translateY(12px);pointer-events:none;transition:.2s}
     .toast.show{opacity:1;transform:translateY(0)}
+    body.pdf-exporting #reportDocument{display:block;width:794px;max-width:none;margin:0 auto;padding:0;background:#fff;border-radius:0}
+    body.pdf-exporting #reportDocument .report-page{width:794px;height:1123px;min-height:1123px;max-height:1123px;overflow:hidden;margin:0;border:0;box-shadow:none;padding:28px 30px 24px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    body.pdf-exporting #reportDocument .report-page+.report-page{margin-top:20px}
+    body.pdf-exporting #reportDocument .report-title{margin:16px 0 12px}
+    body.pdf-exporting #reportDocument .report-section{margin-top:15px}
+    body.pdf-exporting #reportDocument .report-section h3{margin-bottom:7px}
+    body.pdf-exporting #reportDocument .report-stats{margin:11px 0}
     @media(max-width:980px){.dashboard-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.field{grid-column:span 6}.report-profile{grid-template-columns:1fr}}
     @media(max-width:650px){.hero{padding:17px 15px 44px}.identity{align-items:flex-start}.personal-brand img{width:112px}.personal-brand span{font-size:10px}.tool-identity{margin-top:18px}.tool-copy p{font-size:14px}.tool-logo-card{width:min(100%,340px);padding:11px 14px}.suite-badge-wrap{margin-top:-16px}.app-shell{padding:0 9px}.app-nav{padding:9px}.nav-button{padding:8px 10px}.nav-spacer{display:none}.app-nav .add-risk{margin-right:auto}.view{padding:16px 13px}.section-head{flex-direction:column}.stats-grid{grid-template-columns:1fr 1fr;gap:8px}.stat{padding:12px;min-height:91px}.stat-value{font-size:26px}.org-ribbon,.sample-banner,.guide-callout{align-items:flex-start;flex-direction:column}.dashboard-grid{gap:11px}.heatmap{grid-template-rows:repeat(5,50px)}.toolbar{align-items:stretch}.toolbar .search,.toolbar .control,.toolbar .btn{width:100%;min-width:0}.field,.field.w6,.field.w8{grid-column:1/-1}.score-preview-grid{grid-template-columns:1fr}.score-arrow{transform:rotate(90deg);text-align:center}.report-document{padding:8px}.report-page{padding:29px 17px;min-height:0}.report-head{flex-direction:column;align-items:center}.report-head:not(.no-entity) .report-entity{width:100%}.report-tool-logo{width:150px}.report-stats{grid-template-columns:1fr 1fr}.report-status-legend{grid-template-columns:1fr 1fr}.consultation{align-items:flex-start;flex-direction:column}.consultation .btn{width:100%}.dialog-body{padding:12px}.form-section{padding:12px}.dialog-actions{padding:10px 12px}.dialog-actions .btn{flex:1}.logo-upload-box{align-items:flex-start;flex-direction:column}.entity-logo-preview{width:100%;height:94px;flex-basis:auto}.guide-steps,.guide-scale{grid-template-columns:1fr}}
     @media print{
@@ -203,7 +210,7 @@
       body>.hero,body>.suite-badge-wrap,body>.site-footer,body>dialog,body>.toast{display:none!important}
       .app-shell{position:static!important;z-index:auto!important;max-width:none!important;margin:0!important;padding:0!important}
       .app-card{border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important}
-      .app-nav,.report-toolbar,.view:not(#view-report){display:none!important}
+      .app-nav,.report-toolbar,.view:not(#view-report),#view-report>.section-head,#view-report>.consultation{display:none!important}
       #view-report{display:block!important;padding:0!important}
       #reportDocument{position:static!important;width:100%!important;display:block!important;background:#fff!important;padding:0!important;margin:0!important;border-radius:0!important}
       #reportDocument .report-page{width:100%;height:282mm;min-height:282mm;max-height:282mm;overflow:hidden;border:0;box-shadow:none;padding:7mm 7mm 6mm;margin:0;break-inside:avoid;page-break-inside:avoid;break-after:page;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -298,7 +305,7 @@
 
       <section class="view" id="view-report">
         <div class="section-head"><div><h2>تقرير المخاطر</h2><p>تقرير مهني مرن يصلح للمالك أو المدير أو الإدارة أو صاحب الصلاحية في الجهة.</p></div></div>
-        <div class="report-toolbar"><span class="report-toolbar-note">عند فتح نافذة الطباعة اختر «حفظ بصيغة PDF».</span><button class="btn soft" id="refreshReport" type="button">تحديث التقرير</button><button class="btn primary" id="printReport" type="button">طباعة أو حفظ PDF</button></div>
+        <div class="report-toolbar"><span class="report-toolbar-note">يُنزل التقرير مباشرة بصيغة PDF وباسم يتضمن اسم الجهة.</span><button class="btn soft" id="refreshReport" type="button">تحديث التقرير</button><button class="btn primary" id="printReport" type="button">تنزيل تقرير PDF</button></div>
         <article class="report-document" id="reportDocument"></article>
         <div class="consultation">
           <div><h3>تحتاجون بناء سجل مخاطر متكامل؟</h3><p>يمكن تحويل النتائج إلى ورشة عمل وسجل مخاطر مؤسسي وخطة متابعة ملائمة لطبيعة الجهة وأصحاب الصلاحية فيها.</p></div>
@@ -341,7 +348,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-line"><span>إعداد نايف المحمدي</span><strong>مستشار الحوكمة وتطوير الأعمال</strong><span>مرصد المخاطر المؤسسية</span><span class="version">v1.2.2</span></div>
+    <div class="footer-line"><span>إعداد نايف المحمدي</span><strong>مستشار الحوكمة وتطوير الأعمال</strong><span>مرصد المخاطر المؤسسية</span><span class="version">v1.3.0</span></div>
     <div class="privacy-note">تُحفظ البيانات على جهاز المستخدم فقط، دون تخزينها لدى الأداة.</div>
     <span class="social-name">almohammdin</span>
     <nav class="socials" aria-label="حسابات نايف المحمدي">
@@ -430,10 +437,12 @@
   </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" integrity="sha384-ZZ1pncU3bQe8y31yfZdMFdSpttDoPmOZg2wguVK9almUodir1PghgT0eY7Mrty8H" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@4.2.1/dist/jspdf.umd.min.js" integrity="sha384-qovJwSBbRDPP5cEjCp8S0UP66wrvnjaa60XMOGzTNanrThcrGfXfnZkvgY8N1KT3" crossorigin="anonymous"></script>
   <script>
   (()=>{
     'use strict';
-    const TOOL_VERSION='1.2.2';
+    const TOOL_VERSION='1.3.0';
     const TOOL_LINK='https://almohammdin.github.io/risk-register/';
     const TOOL_NAME='مرصد المخاطر المؤسسية';
     const DEFAULT_DOCUMENT_TITLE=document.title;
@@ -586,7 +595,7 @@
       const reportHeader=()=>`<div class="report-head${entityBlock?'':' no-entity'}">${entityBlock}<img class="report-tool-logo" src="./risk-register-logo.svg?v=4" alt="مرصد المخاطر"></div>`;
       const footerMeta=[state.org.preparedBy?`<strong>إعداد:</strong> ${esc(state.org.preparedBy)}`:'',state.org.approvedBy?`<strong>الاعتماد أو المراجعة:</strong> ${esc(state.org.approvedBy)}`:''].filter(Boolean).join(' · ');
       const toolLinkLabel=TOOL_LINK.replace(/^https?:\/\//,'').replace(/\/$/,'');
-      const reportFooter=(page)=>`<div class="report-footer"><div class="report-footer-owner"><span class="naif-report-logo" role="img" aria-label="شعار نايف المحمدي"></span><div class="report-footer-tool-name"><strong>${TOOL_NAME}</strong>${footerMeta?`<span>${footerMeta}</span>`:''}</div></div><span class="report-page-number">${page}/2</span><div class="report-footer-link"><div class="report-footer-url"><a href="${TOOL_LINK}">${toolLinkLabel}</a><small>v${TOOL_VERSION}</small></div><img src="./risk-register-logo.svg?v=4" alt="شعار مرصد المخاطر"></div></div>`;
+      const reportFooter=(page)=>`<div class="report-footer"><div class="report-footer-owner"><img class="naif-report-logo" src="./naif-logo-navy.svg?v=1" alt="شعار نايف المحمدي"><div class="report-footer-tool-name"><strong>${TOOL_NAME}</strong>${footerMeta?`<span>${footerMeta}</span>`:''}</div></div><span class="report-page-number">${page}/2</span><div class="report-footer-link"><div class="report-footer-url"><a href="${TOOL_LINK}">${toolLinkLabel}</a><small>v${TOOL_VERSION}</small></div><img src="./risk-register-logo.svg?v=4" alt="شعار مرصد المخاطر"></div></div>`;
       const sampleNote=state.risks.some(r=>r.isSample)?'<div class="report-note alert">يتضمن التقرير مثالين توضيحيين. عدّلهما أو احذفهما قبل اعتماد التقرير النهائي.</div>':'';
       const executive=total?`بلغ إجمالي المخاطر المسجلة <strong class="latin">${total}</strong>، منها <strong class="latin">${high}</strong> بمستوى عال أو حرج، بينما تجاوزت <strong class="latin">${outside}</strong> منها حد القبول المعتمد. ${overdue?`كما تجاوزت <strong class="latin">${overdue}</strong> إجراءات موعدها وتحتاج متابعة.`:'لا توجد إجراءات معالجة متأخرة وفق المواعيد المسجلة.'} ${top[0]?`أعلى تعرض متبقٍ حاليًا هو «${esc(top[0].title)}» بدرجة <strong class="latin">${score(top[0].residualLikelihood,top[0].residualImpact)}</strong>.`:''}`:'لم تسجل مخاطر بعد. أضف المخاطر وقيّمها ليظهر الملخص التنفيذي.';
       $('reportDocument').innerHTML=`
@@ -666,6 +675,38 @@
     }
     function prepareReportPrint(){document.title=reportPrintTitle()}
     function restoreDocumentTitle(){document.title=DEFAULT_DOCUMENT_TITLE}
+    function waitForReportAssets(){
+      const images=[...$('reportDocument').querySelectorAll('img')];
+      return Promise.all(images.map(image=>image.complete?Promise.resolve():new Promise(resolve=>{image.addEventListener('load',resolve,{once:true});image.addEventListener('error',resolve,{once:true})})));
+    }
+    async function captureReportPage(page){
+      const options={scale:2,backgroundColor:'#ffffff',useCORS:true,allowTaint:false,logging:false,imageTimeout:15000,windowWidth:794,windowHeight:1123};
+      try{return await window.html2canvas(page,{...options,foreignObjectRendering:true})}
+      catch(error){console.warn('تعذر الالتقاط المتقدم، تم استخدام الالتقاط المتوافق.',error);return window.html2canvas(page,{...options,foreignObjectRendering:false})}
+    }
+    async function exportReportPdf(){
+      const button=$('printReport'),originalLabel=button.textContent,scrollPosition=window.scrollY;
+      if(typeof window.html2canvas!=='function'||!window.jspdf?.jsPDF){alert('حدّث الصفحة ثم أعد تنزيل التقرير.');return}
+      renderReport();button.disabled=true;button.setAttribute('aria-busy','true');button.textContent='جاري تجهيز التقرير...';document.body.classList.add('pdf-exporting');
+      try{
+        if(document.fonts?.ready)await document.fonts.ready;
+        await waitForReportAssets();
+        await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+        const pages=[...$('reportDocument').querySelectorAll('.report-page')];
+        if(pages.length!==2)throw new Error(`Expected 2 report pages, received ${pages.length}`);
+        const {jsPDF}=window.jspdf,pdf=new jsPDF({orientation:'portrait',unit:'mm',format:'a4',compress:true});
+        pdf.setProperties({title:reportPrintTitle(),subject:'تقرير المخاطر',author:'نايف المحمدي',creator:TOOL_NAME});
+        for(let index=0;index<pages.length;index++){
+          const canvas=await captureReportPage(pages[index]);
+          if(index)pdf.addPage('a4','portrait');
+          pdf.addImage(canvas.toDataURL('image/jpeg',.96),'JPEG',0,0,210,297,undefined,'FAST');
+          pdf.link(12,288,58,5,{url:TOOL_LINK});
+        }
+        pdf.save(`${reportPrintTitle()}.pdf`);
+        showToast(`تم تنزيل ${reportPrintTitle()}.pdf`);
+      }catch(error){console.error('PDF export failed',error);alert('تعذر تجهيز ملف PDF. حدّث الصفحة وأعد المحاولة.')}
+      finally{document.body.classList.remove('pdf-exporting');button.disabled=false;button.removeAttribute('aria-busy');button.textContent=originalLabel;window.scrollTo(0,scrollPosition)}
+    }
     function exportCsv(){
       const headers=['الرمز','اسم الخطر','التصنيف','الهدف المتأثر','مالك الخطر','الإدارة','الاحتمال قبل الضوابط','الأثر قبل الضوابط','الدرجة قبل الضوابط','الضوابط الحالية','فعالية الضوابط','الاحتمال المتبقي','الأثر المتبقي','الدرجة المتبقية','الاستجابة','إجراء المعالجة','مسؤول الإجراء','الموعد','الحالة','المراجعة القادمة'];
       const rows=filteredRisks().map(r=>[r.code,r.title,r.category,r.objective,r.owner,r.department,r.inherentLikelihood,r.inherentImpact,score(r.inherentLikelihood,r.inherentImpact),r.controls,effectivenessLabels[r.controlEffectiveness],r.residualLikelihood,r.residualImpact,score(r.residualLikelihood,r.residualImpact),responseLabels[r.response],r.treatmentAction,r.treatmentOwner,r.dueDate,statusLabels[r.status],r.reviewDate]);
@@ -689,7 +730,7 @@
       const openGuide=()=>$('guideDialog').showModal(),closeGuide=()=>$('guideDialog').close();
       $('openGuide').addEventListener('click',openGuide);$('openGuideDashboard').addEventListener('click',openGuide);$('closeGuide').addEventListener('click',closeGuide);$('closeGuideButton').addEventListener('click',closeGuide);
       $('removeSamples').addEventListener('click',()=>{if(confirm('حذف المثالين التوضيحيين من سجل المخاطر؟')){state.risks=state.risks.filter(r=>!r.isSample);saveState();renderAll();showToast('تم حذف الأمثلة التوضيحية.')}});
-      $('refreshReport').addEventListener('click',()=>{renderReport();showToast('تم تحديث التقرير.');});$('printReport').addEventListener('click',async()=>{renderReport();prepareReportPrint();if(document.fonts?.ready)await document.fonts.ready;requestAnimationFrame(()=>window.print())});
+      $('refreshReport').addEventListener('click',()=>{renderReport();showToast('تم تحديث التقرير.');});$('printReport').addEventListener('click',exportReportPdf);
       $('riskDialog').addEventListener('click',event=>{if(event.target===$('riskDialog'))closeRiskDialog()});
       $('guideDialog').addEventListener('click',event=>{if(event.target===$('guideDialog'))closeGuide()});
       document.addEventListener('input',event=>{if(event.target.matches('input:not([type="file"])'))event.target.value=latinDigits(event.target.value)});
