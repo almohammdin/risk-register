@@ -155,7 +155,7 @@
     .report-tool-logo{width:156px;height:auto;object-fit:contain}.report-org{text-align:right;min-width:0}
     .report-org strong{display:block;color:var(--navy);font-size:15px}.report-org span{display:block;color:var(--muted);font-size:10px;margin-top:3px}
     .report-title{text-align:center;margin:24px 0 18px}.report-title small{color:#977529;font-weight:800}.report-title h2{margin:3px 0;color:var(--navy);font-size:24px}.report-title p{margin:0;color:var(--muted);font-size:11px}
-    .report-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}.report-stat{--report-accent:var(--navy);--report-tint:#f3f6f8;position:relative;overflow:hidden;border:1px solid color-mix(in srgb,var(--report-accent) 22%,#fff);border-radius:10px;padding:11px 10px 9px;text-align:center;background:linear-gradient(180deg,var(--report-tint),#fff)}.report-stat:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--report-accent)}.report-stat.total{--report-accent:#173a56;--report-tint:#edf3f7}.report-stat.high{--report-accent:#a83d3d;--report-tint:#fff1f0}.report-stat.outside{--report-accent:#b45d2f;--report-tint:#fff5ec}.report-stat.overdue-stat{--report-accent:#9a6d1f;--report-tint:#fff9e9}.report-stat span{display:block;color:var(--muted);font-size:9px}.report-stat strong{font-family:Arial,sans-serif;font-size:21px;color:var(--report-accent)}
+    .report-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0}.report-stat{--report-accent:var(--navy);--report-tint:#f3f6f8;position:relative;overflow:hidden;border:1px solid #d8dfe5;border-radius:10px;padding:11px 10px 9px;text-align:center;background:linear-gradient(180deg,var(--report-tint),#fff)}.report-stat:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--report-accent)}.report-stat.total{--report-accent:#173a56;--report-tint:#edf3f7;border-color:#cdd9e1}.report-stat.high{--report-accent:#a83d3d;--report-tint:#fff1f0;border-color:#e8cece}.report-stat.outside{--report-accent:#b45d2f;--report-tint:#fff5ec;border-color:#ead4c7}.report-stat.overdue-stat{--report-accent:#9a6d1f;--report-tint:#fff9e9;border-color:#e5dcc3}.report-stat span{display:block;color:var(--muted);font-size:9px}.report-stat strong{font-family:Arial,sans-serif;font-size:21px;color:var(--report-accent)}
     .executive-summary{background:linear-gradient(135deg,#f5f7f8,#fff);border:1px solid var(--line);border-right:4px solid var(--gold);border-radius:10px;padding:12px 14px;color:#3f4d5b;font-size:11px;line-height:1.9}
     .report-section{margin-top:21px}.report-section h3{font-size:15px;color:var(--navy);border-right:4px solid var(--gold);padding-right:9px;margin:0 0 10px}.report-note{background:#f8f6ef;border:1px solid #e8dfc5;border-radius:10px;padding:11px 13px;color:#5f5a4c;font-size:10px;line-height:1.8}.report-note.alert{background:#fff8e8;border-color:#ead49c;color:#6d551a}
     .report-document table{min-width:0}.report-document th,.report-document td{font-size:9px;padding:7px}
@@ -348,7 +348,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-line"><span>إعداد نايف المحمدي</span><strong>مستشار الحوكمة وتطوير الأعمال</strong><span>مرصد المخاطر المؤسسية</span><span class="version">v1.3.1</span></div>
+    <div class="footer-line"><span>إعداد نايف المحمدي</span><strong>مستشار الحوكمة وتطوير الأعمال</strong><span>مرصد المخاطر المؤسسية</span><span class="version">v1.3.2</span></div>
     <div class="privacy-note">تُحفظ البيانات على جهاز المستخدم فقط، دون تخزينها لدى الأداة.</div>
     <span class="social-name">almohammdin</span>
     <nav class="socials" aria-label="حسابات نايف المحمدي">
@@ -442,7 +442,7 @@
   <script>
   (()=>{
     'use strict';
-    const TOOL_VERSION='1.3.1';
+    const TOOL_VERSION='1.3.2';
     const TOOL_LINK='https://almohammdin.github.io/risk-register/';
     const TOOL_NAME='مرصد المخاطر المؤسسية';
     const DEFAULT_DOCUMENT_TITLE=document.title;
@@ -694,7 +694,7 @@
       catch(error){console.warn('تعذر تجهيز شعار نايف للتقرير.',error)}
     }
     async function captureReportPage(page){
-      return window.html2canvas(page,{scale:2,backgroundColor:'#ffffff',useCORS:true,allowTaint:false,logging:false,imageTimeout:15000,windowWidth:794,windowHeight:1123,foreignObjectRendering:false});
+      return window.html2canvas(page,{scale:1.5,backgroundColor:'#ffffff',useCORS:true,allowTaint:false,logging:false,imageTimeout:15000,windowWidth:794,windowHeight:1123,foreignObjectRendering:false});
     }
     async function exportReportPdf(){
       const button=$('printReport'),originalLabel=button.textContent,scrollPosition=window.scrollY;
