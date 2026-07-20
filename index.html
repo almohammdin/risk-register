@@ -730,11 +730,13 @@
       const button=$('printReport'),originalLabel=button.textContent;
       button.disabled=true;button.setAttribute('aria-busy','true');button.textContent='جاري تجهيز التقرير...';
       try{
+        prepareReportPrint();
         if(document.fonts?.ready)await document.fonts.ready;
         renderReport();
         await hydrateNaifReportLogos();
         await waitForReportAssets();
         await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+        prepareReportPrint();
         window.print();
       }catch(error){console.error('Report print failed',error);alert('تعذر تجهيز التقرير للطباعة. حدّث الصفحة وأعد المحاولة.')}
       finally{button.disabled=false;button.removeAttribute('aria-busy');button.textContent=originalLabel}
