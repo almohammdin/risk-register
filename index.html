@@ -704,7 +704,8 @@
     function downloadBlob(content,type,filename){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url)}
     function reportPrintTitle(){
       const organization=String(state.org.name||'').replace(/[\\/:*?"<>|]/g,'-').replace(/\s+/g,' ').trim();
-      return [TOOL_NAME,organization].filter(Boolean).join(' - ');
+      const today=new Date(),datePart=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+      return [TOOL_NAME,'تقرير المخاطر',organization,datePart].filter(Boolean).join(' - ');
     }
     function prepareReportPrint(){document.title=reportPrintTitle()}
     function restoreDocumentTitle(){document.title=DEFAULT_DOCUMENT_TITLE}
