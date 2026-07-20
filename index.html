@@ -208,6 +208,7 @@
     body.pdf-exporting #reportDocument .report-section{margin-top:15px}
     body.pdf-exporting #reportDocument .report-section h3{margin-bottom:7px}
     body.pdf-exporting #reportDocument .report-stats{margin:11px 0}
+    body.pdf-exporting #reportDocument .heatmap-wrap{overflow:visible}
     @media(max-width:980px){.dashboard-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.field{grid-column:span 6}.report-profile{grid-template-columns:1fr}}
     @media(max-width:650px){.hero{padding:17px 15px 44px}.identity{align-items:flex-start}.personal-brand img{width:112px}.personal-brand span{font-size:10px}.tool-identity{margin-top:18px}.tool-copy p{font-size:14px}.tool-logo-card{width:min(100%,340px);padding:11px 14px}.suite-badge-wrap{margin-top:-16px}.app-shell{padding:0 9px}.app-nav{padding:9px}.nav-button{padding:8px 10px}.nav-spacer{display:none}.app-nav .add-risk{margin-right:auto}.view{padding:16px 13px}.section-head{flex-direction:column}.stats-grid{grid-template-columns:1fr 1fr;gap:8px}.stat{padding:12px;min-height:91px}.stat-value{font-size:26px}.org-ribbon,.sample-banner,.guide-callout{align-items:flex-start;flex-direction:column}.dashboard-grid{gap:11px}.heatmap{grid-template-rows:repeat(5,50px)}.toolbar{align-items:stretch}.toolbar .search,.toolbar .control,.toolbar .btn{width:100%;min-width:0}.field,.field.w6,.field.w8{grid-column:1/-1}.score-preview-grid{grid-template-columns:1fr}.score-arrow{transform:rotate(90deg);text-align:center}.report-document{padding:8px}.report-page{padding:29px 17px;min-height:0}.report-head{flex-direction:column;align-items:center}.report-head:not(.no-entity) .report-entity{width:100%}.report-tool-logo{width:150px}.report-stats{grid-template-columns:1fr 1fr}.report-status-legend{grid-template-columns:1fr 1fr}.consultation{align-items:flex-start;flex-direction:column}.consultation .btn{width:100%}.dialog-body{padding:12px}.form-section{padding:12px}.dialog-actions{padding:10px 12px}.dialog-actions .btn{flex:1}.logo-upload-box{align-items:flex-start;flex-direction:column}.entity-logo-preview{width:100%;height:94px;flex-basis:auto}.guide-steps,.guide-scale{grid-template-columns:1fr}}
     @media print{
@@ -229,6 +230,7 @@
       #reportDocument .report-section{margin-top:15px}
       #reportDocument .report-section h3{margin-bottom:7px}
       #reportDocument .report-stats{margin:11px 0}
+      #reportDocument .heatmap-wrap{overflow:visible}
       #reportDocument .report-footer{margin-top:auto}
     }
   </style>
@@ -591,7 +593,7 @@
         const h=page.offsetHeight,delta=h-prev;prev=h;return delta;
       });
       stage.innerHTML='';
-      const PAGE_HEIGHT=1123,SAFETY=24;
+      const PAGE_HEIGHT=1123,SAFETY=40;
       const firstAvail=Math.max(PAGE_HEIGHT-firstReserved-footerReserved-SAFETY,200);
       const continuationAvail=Math.max(PAGE_HEIGHT-continuationReserved-footerReserved-SAFETY,200);
       const pages=[];let current=[],avail=firstAvail;
@@ -730,7 +732,7 @@
       catch(error){console.warn('تعذر تجهيز شعار نايف للتقرير.',error)}
     }
     async function captureReportPage(page){
-      return window.html2canvas(page,{scale:1.5,backgroundColor:'#ffffff',useCORS:true,allowTaint:false,logging:false,imageTimeout:15000,windowWidth:794,windowHeight:1123,foreignObjectRendering:false});
+      return window.html2canvas(page,{scale:3,backgroundColor:'#ffffff',useCORS:true,allowTaint:false,logging:false,imageTimeout:15000,windowWidth:794,windowHeight:1123,foreignObjectRendering:false});
     }
     async function exportReportPdf(){
       const button=$('printReport'),originalLabel=button.textContent,scrollPosition=window.scrollY;
