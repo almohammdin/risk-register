@@ -27,7 +27,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## تصدير تقرير PDF
 
-يستخدم الإصدار 1.3.0 مكتبتين مفتوحتي المصدر لتجهيز صفحتي التقرير وتنزيلهما مباشرة باسم ملف محدد:
+يستخدم الإصدار 1.3.1 مكتبتين مفتوحتي المصدر لتجهيز صفحتي التقرير وتنزيلهما مباشرة باسم ملف محدد:
 
 - [html2canvas 1.4.1](https://www.npmjs.com/package/html2canvas) — ترخيص MIT، والنص محفوظ في [vendor/html2canvas-LICENSE.txt](./vendor/html2canvas-LICENSE.txt).
 - [jsPDF 4.2.1](https://www.npmjs.com/package/jspdf) — ترخيص MIT، والنص محفوظ في [vendor/jspdf-LICENSE.txt](./vendor/jspdf-LICENSE.txt).
